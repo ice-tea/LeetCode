@@ -1,0 +1,25 @@
+1:two sum
+	a)bruce searching n*n
+	b)hashmap: position ahead->behind
+2:List Node sum
+	a)NULL
+	b)add upper while 99999
+	c)better result -1 null  when done return next
+3:sum3 key
+	if(i > 0 &&  nums[i] ==  nums[i-1])continue;
+
+35: binary research
+278: first bad?  mid =   ( end + begin) / 2; mid = begin + ( end - begin) / 2;
+
+83: remove duplicate
+
+89: gray code. push all+2^n
+
+91: decode ways-> cation about '0';
+92:reverse ListNode dummy
+
+94: Inorder traverse;
+98: Binary search tree. use 94
+
+96: Unique Binary search tree; f(n) = f(0)*f(n-1) + f(1)*f(n-2)+...+f(n-1)*f(0)
+95
