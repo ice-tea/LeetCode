@@ -1,19 +1,7 @@
-#include<iostream>
-#include<vector>
-using namespace std;
-
-void print(vector<int> v){
-	for(vector<int>::iterator i=v.begin();i!=v.end();++i){
-		printf("%d  ",*i);
-	}
-	printf("\n");
-}
-
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         vector<int> tmp =nums;
-		print(tmp);
         int s;
         int i;
         s=tmp.size();
@@ -24,25 +12,20 @@ public:
                 else if(i+1==s)
                     tmp.push_back(tmp[s-1]);
             }
-			print(tmp);
             tmp.erase(tmp.begin(),tmp.begin()+s);
             s=tmp.size();
-			print(tmp);
         }
         return tmp[0];
     }
+    /*
+    int majorityElement2(vector<int>& nums) {
+        //unordered_map<int, int> myMap;
+        map<int, int> myMap;
+        for (auto& num: nums) {
+            myMap[num]++;
+            if (myMap[num]>nums.size()/2)
+                return num;
+         }
+    }
+    */
 };
-
-
-int main(){
-	vector<int> nums;
-	nums.push_back(2);
-	nums.push_back(2);
-	nums.push_back(1);
-	nums.push_back(1);
-	nums.push_back(1);
-	nums.push_back(2);
-	nums.push_back(2);
-	Solution s;
-	cout<< s.majorityElement(nums);
-}
