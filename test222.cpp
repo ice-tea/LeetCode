@@ -1,3 +1,5 @@
+//fa fa-lock = 56
+
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -52,7 +54,7 @@ public:
             }
             for(int i=1;i<s && res[i]!=0;++i){
                 res[i]/=res[0];
-				cout<<"res[]"<<i<<":"<<res[i]<<endl;
+				//cout<<"res[]"<<i<<":"<<res[i]<<endl;
                 maxP = max(maxP,res[i]);
             }
             res.erase(res.begin(),res.begin()+1);
