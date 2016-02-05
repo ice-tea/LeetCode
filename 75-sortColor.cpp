@@ -29,3 +29,42 @@ public:
         }
     }
 };
+
+
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int len = nums.size();
+        int pos0=0;
+        int pos2=len-1;
+        
+        int i=0;
+        while(i<len && i<=pos2){
+            if(nums[i] == 0){
+                if(i==pos0){
+                    ++i;
+                    continue;
+                }
+                else{
+                    nums[i]=nums[pos0];
+                    nums[pos0++] = 0;
+                }
+            }
+            else if(nums[i] == 2){
+                if(i==pos2){
+                    ++i;
+                    continue;
+                }
+                else{
+                    nums[i]=nums[pos2];
+                    nums[pos2--] = 2;
+                }
+            }
+            else{
+                ++i;
+            }
+        }
+        
+        return;
+    }
+};
